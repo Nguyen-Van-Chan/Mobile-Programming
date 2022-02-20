@@ -1,0 +1,49 @@
+package com.example.lab3_tonghieutichthuong;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import org.w3c.dom.Text;
+
+public class MainActivity extends AppCompatActivity {
+    EditText txtSoa,txtSob;
+    TextView txtKetQua;
+    Button btnTinhTong,btnTinhHieu,btnTinhTich,btnTinhThuong;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        addControls();
+        addEvents();
+    }
+
+    private void addEvents() {
+    }
+
+    private void addControls() {
+        txtSoa=findViewById(R.id.txtSoa);
+        txtSob=findViewById(R.id.txtSob);
+        txtKetQua=findViewById(R.id.txtKetQua);
+    }
+
+    public void xuLyTinhTong(View view) {
+        int a=Integer.parseInt(txtSoa.getText().toString());
+        int b=Integer.parseInt(txtSob.getText().toString());
+        int tinhTong=a+b;
+
+
+    }
+
+    public void xuLyTinhHieu(View view) {
+    }
+
+    public void xuLyThoat(View view) {
+        finish();
+    }
+}
